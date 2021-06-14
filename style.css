@@ -1,0 +1,12 @@
+.typing {
+    text-align: center;
+    color: blue;
+    /* padding-top: 10em; */
+}
+
+.cro1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
