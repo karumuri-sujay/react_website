@@ -65,7 +65,7 @@
                         <textarea name="address" id="address" class="form-control" cols="30" rows="10"></textarea>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary" onclick="validate()">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="validate()">Submit</button>
                 </div>
                 <div class="col-sm-6">
                     <p class="bg-danger">Connect with us officially</p>
@@ -79,9 +79,28 @@
     <script>
         function validate() {
             let name = document.getElementById("name").value;
+            let mail = document.getElementById("email").value;
+            let num = document.getElementById("phone").value;
+            let add = document.getElementById("address").value;
+            //console.log(name);
+            //console.log(mail);
+            //console.log(num);
+            //console.log(add);
             if (name === "") {
                 alert("You have entered wrong name");
             }
+            const contact = {
+                "name": name,
+                "mail": mail,
+                "Phone Number": num,
+                "Address": add
+            };
+            console.log("Before Adding");
+            console.log(contact);
+            let adding = prompt("Enter your location");
+            contact["location"] = adding;
+            console.log("After Adding");
+            console.log(contact);
         }
     </script>
 </body>
